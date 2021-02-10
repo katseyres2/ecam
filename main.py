@@ -24,15 +24,26 @@ def RegEx_matchWindowsPath(value:str):
 
 def RegEx_findNumberInFile(path:str):
     pattern = re.compile(r"[\+-]?\d+")
+    sentence = ""
 
     with open(path, mode='r') as f:
         data = f.readlines()
         for indexLine, line in enumerate(data):
             result = re.findall(pattern, line)
             if (result):
-                print("Line {0}: {1}".format(indexLine, ", ".join(result)))
+                sentence += "Line {0}: {1}\n".format(indexLine, ", ".join(result))
+    
+    return sentence
 
 # ----------------------------------------------------------------------- 3.
+
+def RegEx_cutURL(path:str):
+    protocol = re.search(r"https?", path)
+    domain = re.search(r"www\..+\.com", path)
+    path = re.search(r"/[\w\-\/]*", path)
+
+    return path
+
 
 
 
@@ -42,6 +53,7 @@ phoneNumber = "+32 472 102 008"
 intNumber = "-0353"
 licencePlate = "2324ede"
 windowsPath = "C:\\Users\\Denis\\putty-64bit-0.74-installer.msi"
+url = "https://www.stackoverflow.com/questions/12453580/how-to-concatenate-items-in-a-list-to-a-single-string"
 
 if __name__ == '__main__':
     # print(RegEx_matchPhoneNumber(phoneNumber))
@@ -49,7 +61,9 @@ if __name__ == '__main__':
     # print(RegEx_matchLicensePlate(licencePlate))
     # print(RegEx_matchWindowsPath(windowsPath))
 
-    try:
-        RegEx_findNumberInFile(sys.argv[1])
-    except:
-        RegEx_findNumberInFile("findNumber.txt")
+    # try:
+    #     print(RegEx_findNumberInFile(sys.argv[1]))
+    # except:
+    #     print(RegEx_findNumberInFile("findNumber.txt"))
+
+    print(RegEx_cutURL(url))
