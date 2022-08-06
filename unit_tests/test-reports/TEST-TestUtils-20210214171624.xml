@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="TestUtils-20210214171624" tests="3" file=".py" time="0.007" timestamp="2021-02-14T17:16:24" failures="0" errors="0" skipped="0">
+	<testcase classname="TestUtils" name="test_fact" time="0.005" timestamp="2021-02-14T17:16:24" file="test_utils.py" line="10"/>
+	<testcase classname="TestUtils" name="test_integrate" time="0.002" timestamp="2021-02-14T17:16:24" file="test_utils.py" line="21"/>
+	<testcase classname="TestUtils" name="test_roots" time="0.000" timestamp="2021-02-14T17:16:24" file="test_utils.py" line="15"/>
+</testsuite>
