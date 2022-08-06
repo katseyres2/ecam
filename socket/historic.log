@@ -1,5 +1,0 @@
-DEBUG:root:[Mon Mar 15 21:39:01 2021] 127.0.0.1:300 -> hello
-DEBUG:root:[Mon Mar 15 21:39:09 2021] 127.0.0.1:3004 -> Hello !
-INFO:root:[Mon Mar 15 21:39:45 2021] 127.0.0.1:3004 -> Hello !
-INFO:root:[Wed Mar 17 15:52:00 2021] 127.0.0.1:4000 -> Coucou les gars !
-INFO:root:[Wed Mar 17 15:52:30 2021] 127.0.0.1:4001 -> Salut !
